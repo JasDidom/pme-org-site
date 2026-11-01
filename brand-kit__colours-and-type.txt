@@ -1,0 +1,30 @@
+PME brand kit · v1 · performancemarketingengineer.org
+
+SYMBOL
+The loop: one even ring running creative → decisions → signal, fused into the person (the ink bead) at half past one.
+Use pme-symbol-on-light on light grounds, pme-symbol-on-dark on dark grounds. Do not rotate, recolour or redraw.
+Minimum size 16 px. Clear space: one bead width on every side.
+
+WORDMARK
+Lowercase, Geist SemiBold, tracking -4.5% (stacked -6%). Outlined in every SVG, so no font install is needed.
+"pme.org", "pme.com", "pme.jobs" and "performance marketing engineer" share one gradient.
+
+COLOURS
+Gradient   #E5603E (coral, creative) → #D99A14 (amber, decisions) → #917E7A (warm grey) → #4A63E0 (blue, signal)
+           stops 0 / 45 / 75 / 100 %, left to right
+Ink        #111214   the person on light, type, dark grounds
+White      #FFFFFF   the person on dark, light grounds
+Coral      #E5603E   Amber #D99A14   Blue #4A63E0   (craft colours, for diagrams and UI)
+
+TYPE
+Geist (headings 500-600, body 400) and Geist Mono (labels). Free, SIL Open Font License: vercel.com/font
+
+FILES
+symbol/     SVG + PNG (64-1024 px), light and dark
+wordmark/   gradient wordmarks, single line and stacked (SVG + PNG)
+lockups/    symbol + wordmark, light and dark (SVG + PNG)
+app-icons/  1024 px app icon and round avatar (SVG + PNG)
+favicon/    favicon.ico (16/32/48), 32 px PNG, 180 px Apple touch icon, SVG
+
+The symbol uses a soft SVG filter for its liquid join; it renders exactly in browsers and when the PNGs are used.
+For print or design tools that ignore SVG filters, use the 1024 px PNGs.

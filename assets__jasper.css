@@ -1,0 +1,205 @@
+/* jasper.css — the home page's language on every sub page. Loaded last; overrides site.css, v18.css and agents.css. */
+:root{
+  --bg:#ffffff; --tile:#f7f7f6; --card:#ffffff; --white:#ffffff; --surf:#f7f7f6;
+  --ink:#111214; --text:#45464c; --muted:#7a7c83; --faint:#c3c4c8; --line:#e8e8e6; --line2:#f0f0ee;
+  --btn:#111214; --btn2:#111214;
+  --cre:#e5603e; --ana:#d99a14; --dec:#d99a14; --eng:#4a63e0; --sig:#4a63e0; --blue:#4a63e0; --coral:#e5603e; --amber:#d99a14; --ok:#2f9a52; --green:#2f9a52;
+  --cre-hl:#fde3da; --dec-hl:#fbefcc; --sig-hl:#e3e7fd; --ok-hl:#dcf3e2; --vio-hl:#ece6fd;
+  --serif:"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --sans:"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --mono:"Geist Mono",ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  --r:14px; --r-s:8px; --shadow:0 1px 2px rgba(17,18,20,.04),0 8px 28px -12px rgba(17,18,20,.12);
+}
+html body{background:#fff;background-image:none;color:var(--text);font-family:var(--sans)}
+body::before{background:#fff}
+h1,h2,h3,h4{font-family:var(--sans);font-weight:500;color:var(--ink);font-style:normal}
+em{font-style:normal}
+
+/* header: identical to the home page */
+.jnav{position:sticky;top:env(safe-area-inset-top,0px);z-index:60;background:color-mix(in srgb,#fff 88%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line2);font-family:var(--sans)}
+.jnav .jw{max-width:1200px;margin-inline:auto;padding:0 max(20px,env(safe-area-inset-left,0px));height:64px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px}
+.jnav .jb{display:flex;align-items:center;gap:9px;text-decoration:none}
+.jnav .jb svg{display:block;width:26px;height:26px}
+.jnav .jb b{font:600 19px/1 var(--sans);letter-spacing:-.045em;background:linear-gradient(90deg,#e5603e,#d99a14 45%,#917e7a 75%,#4a63e0);-webkit-background-clip:text;background-clip:text;color:transparent;padding:2px 1px 3px 0}
+.jnav nav{display:flex;gap:2px}
+.jnav nav a{font-size:14.5px;color:var(--text);text-decoration:none;padding:7px 12px;border-radius:7px}
+.jnav nav a:hover,.jnav nav a[aria-current]{color:var(--ink);background:var(--tile)}
+.jnav .jr{display:flex;justify-content:flex-end;align-items:center;gap:14px}
+.jnav .jr .j{font-size:14.5px;color:var(--text);text-decoration:none}
+.jnav .jr .jc{display:inline-flex;align-items:center;height:36px;padding:0 14px;border-radius:8px;background:var(--ink);color:#fff;font:500 14px/1 var(--sans);text-decoration:none;white-space:nowrap}
+@media (max-width:860px){.jnav nav,.jnav .jr .j{display:none}.jnav .jw{grid-template-columns:1fr auto}}
+
+/* pixel bands and fields are gone; the page starts on white like the home */
+.band,.fray,.fieldband,canvas[data-field],.f18 .ffield,.cta18 .px1,.cta18 .px2,.cta18 .px3{display:none!important}
+
+/* eyebrows: the home's icon + label kicker */
+.k,.lbl,.agx-k,.pill18{font:500 13.5px/1.3 var(--sans)!important;letter-spacing:0!important;text-transform:none!important;color:var(--ink)!important;display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap}
+.k:not(:has(.dot))::before,.lbl:not(:has(.dot,i,.pi))::before{content:"";flex:none;width:8px;height:8px;border-radius:2px;background:var(--ink);box-shadow:0 0 0 6px var(--vio-hl);margin:0 6px 0 6px}
+.k .dot{width:8px;height:8px;border-radius:2px;margin:0 6px;box-shadow:0 0 0 6px var(--vio-hl)}
+.k .d-e,.k .dot.d-e{box-shadow:0 0 0 6px var(--sig-hl)}.k .d-a{box-shadow:0 0 0 6px var(--dec-hl)}.k .d-c{box-shadow:0 0 0 6px var(--cre-hl)}
+.d-e{background:var(--eng)}.d-a{background:var(--ana)}.d-c{background:var(--cre)}
+
+/* type scale of the home: 80 / 54 / 28 / 20 */
+.pt,.ghead .pt,.thead .pt{font:500 clamp(44px,6.2vw,76px)/1.03 var(--sans)!important;letter-spacing:-.045em!important;color:var(--ink)}
+.pt em,.cta18 h2 em,.pcta h2 em,.agx h2 em{background:none!important;-webkit-text-fill-color:currentColor!important;color:var(--muted)!important;font-style:normal!important;font-family:var(--sans)!important}
+.h2,.sh18 h2,.split h2,.ts h2,.cmain .h2,.univ .h2,.pcta h2,.cta18 h2,.agx h2{font-family:var(--sans)!important;font-weight:500!important;letter-spacing:-.04em!important;line-height:1.06!important}
+.h2,.sh18 h2,.pcta h2,.cta18 h2{font-size:clamp(32px,4.4vw,54px)!important}
+.ts h2{font-size:clamp(26px,2.6vw,34px)!important;letter-spacing:-.03em!important}
+.phead .lead,.lead{font-size:18px;line-height:1.55;color:var(--text);font-family:var(--sans)!important}
+.tdef,.thead .tdef,.ts .dq{font-family:var(--sans)!important;font-weight:400;letter-spacing:-.02em;color:var(--ink)}
+.tdef{font-size:clamp(20px,2vw,24px)!important;line-height:1.45!important}
+.book h3,.gc h3,.uc h3,.lvg h3,.crd b,.oc b,.feat h2,.ch1 h3,.blk h3,.proj h3,.outc h3{font-family:var(--sans)!important;font-weight:500!important;letter-spacing:-.02em;color:var(--ink)}
+.phead,.thead,.ghead{padding-top:clamp(64px,9vw,120px)!important}
+
+/* surfaces: light-grey rounded tiles, one white card with a soft shadow for side facts */
+.book,.gc,.uc,.oc,.crd,.lvg>div,.skq,.does div,.wgrid>div,.course,.feat,.proj,.outc,.learnl li,.links,.meta4,.toc a,.acc details,.ab,.win18,.agx-card,.imp>*,.stat,.s18 .card{background:var(--tile)!important;border:0!important;box-shadow:inset 0 0 0 1px var(--line2)!important;border-radius:var(--r)!important}
+.facts,.stoc,.tside>div,.cside .book{background:#fff!important;border:0!important;box-shadow:inset 0 0 0 1px var(--line),var(--shadow)!important;border-radius:var(--r)!important}
+.tw,.tw table{border-radius:var(--r);border-color:var(--line)!important;background:#fff}
+.tw th{font:500 12px var(--mono);color:var(--muted);background:var(--tile)}
+.gc:hover,.oc:hover,.crd:hover{box-shadow:inset 0 0 0 1px var(--faint)!important;transform:none}
+.proj{border-top:0!important}
+.pill,.chips a,.stk span,.badge{border-radius:999px!important;background:#fff!important;border:1px solid var(--line)!important;font-family:var(--sans)!important;font-size:12.5px!important;color:var(--text)!important}
+.gf button,.agx-seg button{border-radius:999px!important;font-family:var(--sans)!important}
+.gf button[aria-pressed="true"]{background:var(--ink)!important;color:#fff!important;border-color:var(--ink)!important}
+.srch input{border-radius:999px!important;border-color:var(--line)!important;background:#fff!important}
+
+/* buttons: the home's rounded black / outline buttons, no notches */
+.btn,.b18{clip-path:none!important;border-radius:8px!important;font:500 15px/1 var(--sans)!important;box-shadow:none!important}
+.btn-dark,.b18.dark{background:var(--ink)!important;color:#fff!important;border-color:var(--ink)!important}
+.b18.light,.b18.ghost{background:#fff!important;color:var(--ink)!important;box-shadow:inset 0 0 0 1px var(--line),0 1px 2px rgba(17,18,20,.05)!important;border:0!important}
+.tl,.tl18{border-bottom:0!important;text-decoration:none;font-weight:500;color:var(--ink);display:inline-flex;gap:6px;align-items:center}
+.tl::after,.tl18::after{content:"→"}
+.tl:hover::after,.tl18:hover::after{transform:translateX(3px)}
+
+/* bands of the page: no cream, sections separated by space and a hairline */
+.univ,.rel,.pcta,.sfoot{background:#fff!important}
+.pcta,.cta18{border-top:1px solid var(--line2)}
+.pcta .wrap,.cta18 .wrap{text-align:center}
+section,.s18{background-color:transparent}
+.wrap{max-width:1200px}
+
+/* isometric line drawings from the home page, in place of the pixel fields */
+:root{--iso-ln:#2b2d33;--iso-l:#ededeb;--iso-r:#f6f6f4}
+.iso{display:block;width:100%;height:auto;overflow:visible}
+.isg polygon{stroke:var(--iso-ln);stroke-width:1;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.isl{stroke:var(--iso-ln);stroke-width:1;vector-effect:non-scaling-stroke;fill:none}
+.isl.d{stroke-dasharray:3 3}
+.isoart{display:grid!important;place-items:center;width:100%;height:100%;min-height:180px;padding:9% 12%;background:var(--tile);border-radius:inherit}
+.isoart svg{max-width:300px;max-height:100%}
+.book .art .isoart{min-height:0;aspect-ratio:4/3;background:#fff;border-radius:10px}
+.mffield .isoart,.mfwide .isoart{min-height:320px;border-radius:var(--r)}
+.mfh h1{text-transform:none!important;font-weight:500!important;letter-spacing:-.045em!important;line-height:1.02!important;max-width:13ch!important}
+.ab-hero h1,.ab-vision h2,.ab-impact h2,.imp b{font-weight:500!important}
+.imp>div{border-radius:var(--r)!important}
+
+/* the one black panel, as on the home */
+.cta18,.tpanel{background:#0f1012!important;color:#9c9ea5}
+.tpanel{border-radius:var(--r)}
+.cta18 h2{color:#f3f3f1!important}.cta18 h2 em{color:#9c9ea5!important;display:block}
+.cta18 .ct p{color:#9c9ea5!important}
+.cta18 .win18{background:#1b1c20!important;box-shadow:inset 0 0 0 1px #2a2b30!important}
+.cta18 .win18 .isoart{background:#f7f7f6}
+.cta18 .wd b{color:#f3f3f1}.cta18 .wd p{color:#9c9ea5}
+.cta18 .b18.light{background:#fff!important;color:#111214!important}
+.cta18 .b18.ghost{background:transparent!important;color:#f3f3f1!important;box-shadow:inset 0 0 0 1px #3a3b40!important}
+.mffield .isoart{min-height:0;height:100%;max-height:420px}
+.isoart{overflow:hidden}
+.isoart svg{width:auto;height:auto;max-width:min(300px,78%);max-height:86%}
+.ncv .isoart,.tmv .isoart{padding:8%}
+.joinfield{display:none!important}
+/* chapter covers: a plain white card with the drawing, no sleeve or spine */
+.sleeve,.book::before,.book .art::before,.book .art::after{display:none!important}
+.book{background:#fff!important;box-shadow:inset 0 0 0 1px var(--line),var(--shadow)!important;transform:none!important}
+.book .art{background:none!important;border:0!important;box-shadow:none!important}
+
+/* ===== sub-page deep dive: one language with the home ===== */
+/* perspective lines behind heroes and closes */
+.thead,.phead,.ghead,.ab-hero,.ab-join,.lg,.mf-hero.jx,.mf-end.jx{position:relative;isolation:isolate}
+.jpersp{position:absolute;top:0;bottom:0;left:50%;width:100vw;transform:translateX(-50%);z-index:-1;pointer-events:none;overflow:hidden;-webkit-mask-image:radial-gradient(ellipse 70% 75% at 50% 45%,#000 35%,transparent 80%);mask-image:radial-gradient(ellipse 70% 75% at 50% 45%,#000 35%,transparent 80%)}
+.jpersp svg{position:absolute;left:50%;top:0;width:1800px;height:100%;transform:translateX(-50%)}
+.jpersp line{stroke:#ececea;stroke-width:1}
+.ab-hero::before{display:none!important}
+.lg{overflow:visible}
+
+/* heroes are centred, as on the home and the Jasper pages */
+.thead .wrap,.phead .wrap,.ghead .wrap{display:flex;flex-direction:column;align-items:center;text-align:center}
+.phead,.thead,.ghead{padding-bottom:clamp(48px,6vw,80px)!important}
+.thead .pt,.phead .pt,.ghead .pt{max-width:16ch;text-wrap:balance}
+.thead .tdef,.phead .lead,.ghead .lead{max-width:58ch;margin-inline:auto}
+.k{justify-content:center}
+.ts .k,.cmain .k,.ch1 .k,.skh .k,.lvl .k,.feat .k,.tside .k,.facts .k,.chap .k{justify-content:flex-start}
+.crumbs{justify-content:center;font:13px var(--sans)!important;color:var(--muted)}
+.crumbs a{text-decoration:none;color:var(--text)}
+.uh{justify-content:center}
+.pt .ab.big{vertical-align:middle;margin-left:10px}
+.vsl{font:500 14.5px var(--sans);color:var(--ink);text-decoration:none;margin-top:18px}
+.meta4{margin-inline:auto!important;background:#fff!important;box-shadow:inset 0 0 0 1px var(--line),var(--shadow)!important}
+.toc{width:100%}
+.gtools{justify-content:center}
+.lg>.ey,.lg>h1,.lg>.lede{text-align:center;margin-inline:auto}
+.lg>.ey{display:flex;justify-content:center}
+.lg h1{max-width:16ch}
+
+/* micro labels: Jasper barely uses mono caps */
+.abs .t,.blk h3,.cbody h4,.crd .ck,.facts dt,.ftag,.gh,.gk,.jdr span,.kc .who,.meta4 dt,.outc h3,.outc p span,.ph2,.rmk,.rmt .cov .ch,.sc .sb small,.skq .sn,.stk span,.stoc span,.ts .sh,.lg .ey,.proj .ph,.learnl h3,.tw th,.tw td:first-child,.links .pv,.ts .crit,.mfr .just{font-family:var(--sans)!important;text-transform:none!important;letter-spacing:0!important;font-size:12.5px!important;font-weight:500!important}
+.facts dt,.meta4 dt,.gk,.crd .ck,.tw th,.stoc span,.ftag,.gh{color:var(--muted)!important}
+.tw td:first-child{color:var(--ink)!important;font-size:13.5px!important}
+.tw td,.tw th{border-color:var(--line2)!important}
+.tw th{background:var(--tile)!important}
+.lg .ey{font-size:13.5px!important;color:var(--ink)!important}
+
+/* grids: no orphans */
+.does:has(>div:nth-child(3):last-child){grid-template-columns:repeat(3,minmax(0,1fr))!important}
+@media (max-width:760px){.does:has(>div:nth-child(3):last-child){grid-template-columns:minmax(0,1fr)!important}}
+
+/* hover: a quiet lift on every card that links somewhere */
+a.gc,a.oc,a.crd,a.uc,.uc,a.nc18,a.tm,a.mfc,.book,.toc a,.gc,.oc,.crd,.links a,.lvg>div,.skq{transition:transform .25s cubic-bezier(.2,.7,.2,1),box-shadow .25s}
+a.gc:hover,a.oc:hover,a.crd:hover,a.nc18:hover,a.tm:hover,a.mfc:hover,.toc a:hover,.uc:hover,.book:hover,.gc:hover,.oc:hover,.crd:hover{transform:translateY(-2px)!important;box-shadow:inset 0 0 0 1px var(--faint),0 12px 30px -16px rgba(17,18,20,.25)!important}
+.links a:hover{background:#fff}
+@media (prefers-reduced-motion:reduce){*{transition-duration:.01ms!important;animation-duration:.01ms!important}}
+
+/* role map on the what-is pages: one black rounded panel inside the grid */
+.rmap{background:transparent!important;padding:8px 0 24px!important;overflow:visible!important}
+.rmap::before{display:none!important}
+.rmap .rmg{background:#0f1012;color:#e9e7ef;border-radius:var(--r);padding:clamp(24px,4vw,48px);position:relative;overflow:hidden;max-width:1200px}
+.rmap .rmg::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px) 0 0/40px 40px,linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px) 0 0/40px 40px;-webkit-mask-image:radial-gradient(ellipse 60% 70% at 30% 50%,#000 30%,transparent 80%);mask-image:radial-gradient(ellipse 60% 70% at 30% 50%,#000 30%,transparent 80%);pointer-events:none}
+.rmap .rmg>*{position:relative}
+.rmap .rmt h2{color:#f3f3f1!important}
+.rmap .k{color:#f3f3f1!important;justify-content:flex-start}
+
+/* manifesto: centred hero and close like the home */
+.mf-hero.jx{padding:clamp(72px,9vw,120px) 0 0;text-align:center}
+.mf-hero.jx .wrap:first-of-type{display:flex;flex-direction:column;align-items:center;gap:22px}
+.mf-hero.jx h1{font:500 clamp(44px,6.6vw,80px)/1.02 var(--sans)!important;letter-spacing:-.045em!important;max-width:14ch;text-transform:none!important}
+.mf-hero.jx .lead{max-width:56ch;margin-inline:auto}
+.mf-hero.jx .row,.mf-end.jx .row{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.mf-hero.jx .mffield{height:clamp(240px,30vw,400px)!important;margin-top:56px;border-radius:var(--r);overflow:hidden;box-shadow:inset 0 0 0 1px var(--line2)}
+.mf-hero.jx .mffield .isoart{min-height:0!important;height:100%!important;max-height:none!important;border-radius:var(--r)}
+.mf-intro{padding:clamp(72px,9vw,120px) 0 24px!important;text-align:center}
+.mf-intro p{margin-inline:auto!important;max-width:24ch!important;font:500 clamp(28px,3.4vw,44px)/1.12 var(--sans)!important;letter-spacing:-.035em!important;color:var(--ink)!important}
+.mf-sec{padding-block:clamp(56px,7vw,96px)!important}
+.mfwide{border-radius:var(--r);overflow:hidden}
+.mfwide .isoart{min-height:0!important;height:100%!important}
+.mf-end.jx{padding:clamp(96px,11vw,150px) 0!important;text-align:center;border-top:0!important}
+.mf-end.jx .wrap{display:flex!important;flex-direction:column;align-items:center;gap:18px!important}
+.mf-end.jx .h2{max-width:15ch}
+.mf-end.jx .lead{max-width:52ch;color:var(--text)!important;font-size:18px!important}
+
+/* about: the join block sits on the perspective lines, centred */
+.ab-join{text-align:center}
+
+/* old history page: a pointer to the new one */
+.hmove{min-height:56vh}
+.hmove .row{display:flex;gap:10px;justify-content:center;margin-top:10px}
+.mf-hero.jx h1{margin:4px 0 6px!important;line-height:1.04!important}
+.mf-hero.jx .lead{font-size:18px!important;line-height:1.55!important}
+.split .body p,.split p{text-align:left!important;hyphens:none}
+.lg .jpersp{bottom:auto;height:440px}
+.lg .body p{margin:0 0 12px}
+.imp>*{background:#fff!important;box-shadow:inset 0 0 0 1px var(--line),var(--shadow)!important}
+.pcta{position:relative;isolation:isolate;padding-block:clamp(96px,11vw,150px)!important;border-top:1px solid var(--line2)}
+.pcta .wrap{flex-direction:column;justify-content:center!important;text-align:center;border-top:0!important;padding-top:0!important;gap:22px!important}
+.pcta h2{max-width:18ch}
+.phead .wrap>*:not(.k):not(.pt):not(.lead):not(.crumbs):not(.uh):not(.tdef):not(.vsl):not(.row):not(.meta4):not(.toc):not(.gtools){align-self:stretch;text-align:left}
+@media (max-width:600px){.ab-hero h1{font-size:clamp(24px,6.6vw,40px)!important;line-height:1.3!important}.ab-hero .hw{white-space:nowrap!important;display:inline-flex!important}}
+.mffield .isoart svg,.mfwide .isoart svg{max-width:min(460px,72%);max-height:92%}
